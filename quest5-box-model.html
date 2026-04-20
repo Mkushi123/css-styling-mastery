@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colors</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: sans-serif;
+      }
+
+      /* Hero section yenye gradient */
+      .hero {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
+        padding: 60px 20px;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 48px;
+        margin-bottom: 16px;
+      }
+
+      .hero p {
+        font-size: 18px;
+        margin-bottom: 24px;
+      }
+
+      /* Button */
+      .btn {
+        background: #8b5cf6;
+        color: white;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      .btn:hover {
+        background: #7c3aed;
+      }
+
+      /* Cards section */
+      .cards {
+        display: flex;
+        gap: 16px;
+        padding: 40px 20px;
+        justify-content: center;
+      }
+
+      .card {
+        background: #f0f0ff;
+        border: 2px solid #8b5cf6;
+        border-radius: 8px;
+        padding: 24px;
+        width: 200px;
+        text-align: center;
+      }
+
+      /* Circle */
+      .circle {
+        width: 80px;
+        height: 80px;
+        background: tomato;
+        border-radius: 50%;
+        margin: 0 auto 12px;
+      }
+
+      /* Color formats section */
+      .colors {
+        padding: 40px 20px;
+        text-align: center;
+      }
+
+      .color-box {
+        display: inline-block;
+        width: 120px;
+        height: 60px;
+        border-radius: 8px;
+        margin: 8px;
+        line-height: 60px;
+        color: white;
+        font-size: 13px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- Hero section -->
+    <div class="hero">
+      <h1>Colors & Gradients</h1>
+      <p>Making websites beautiful with CSS colors!</p>
+      <button class="btn">Get Started</button>
+    </div>
+
+    <!-- Cards zenye rounded corners -->
+    <div class="cards">
+      <div class="card">
+        <div class="circle"></div>
+        <h3>Circle</h3>
+        <p>border-radius: 50%</p>
+      </div>
+      <div class="card">
+        <div class="circle" style="background: #667eea;"></div>
+        <h3>Rounded</h3>
+        <p>border-radius: 8px</p>
+      </div>
+      <div class="card">
+        <div class="circle" style="background: #764ba2;"></div>
+        <h3>Gradient</h3>
+        <p>linear-gradient</p>
+      </div>
+    </div>
+
+    <!-- Color formats -->
+    <div class="colors">
+      <h2>Color Formats</h2>
+      <div class="color-box" style="background: tomato;">Named</div>
+      <div class="color-box" style="background: #8b5cf6;">Hex</div>
+      <div class="color-box" style="background: rgb(102, 126, 234);">RGB</div>
+    </div>
+
+  </body>
+</html>
