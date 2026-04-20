@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: sans-serif;
+        color: #333;
+      }
+
+      /* Navbar */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px;
+        background: #1a1a2e;
+        color: white;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .logo {
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      /* Hero */
+      .hero {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
+        text-align: center;
+        padding: 40px 16px;
+      }
+
+      .hero h1 {
+        font-size: 28px;
+        margin-bottom: 12px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      /* Cards */
+      .container {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px;
+      }
+
+      .card {
+        background: #f0f0ff;
+        border: 2px solid #8b5cf6;
+        border-radius: 8px;
+        padding: 24px;
+        text-align: center;
+      }
+
+      .card h2 {
+        color: #8b5cf6;
+        margin-bottom: 8px;
+      }
+
+      /* Screen size indicator */
+      .screen-size {
+        text-align: center;
+        padding: 12px;
+        font-weight: 700;
+        background: #ffedd5;
+        color: #c2410c;
+      }
+
+      /* ================================
+         Tablet - 768px
+      ================================ */
+      @media (min-width: 768px) {
+        .navbar {
+          padding: 16px 32px;
+        }
+
+        .nav-links {
+          display: flex;
+          list-style: none;
+          gap: 24px;
+        }
+
+        .nav-links a {
+          color: white;
+          text-decoration: none;
+        }
+
+        .hero h1 {
+          font-size: 40px;
+        }
+
+        .container {
+          flex-direction: row;
+          padding: 32px;
+        }
+
+        .screen-size {
+          background: #dcfce7;
+          color: #15803d;
+        }
+      }
+
+      /* ================================
+         Desktop - 1024px
+      ================================ */
+      @media (min-width: 1024px) {
+        .hero h1 {
+          font-size: 56px;
+        }
+
+        .hero {
+          padding: 80px 32px;
+        }
+
+        .container {
+          padding: 40px 80px;
+          gap: 24px;
+        }
+
+        .screen-size {
+          background: #dbeafe;
+          color: #1d4ed8;
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- Screen size indicator -->
+    <div class="screen-size">
+      📱 Mobile — resize window to see changes!
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">MySite</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero -->
+    <div class="hero">
+      <h1>Responsive Design</h1>
+      <p>This page looks great on all screen sizes!</p>
+    </div>
+
+    <!-- Cards -->
+    <div class="container">
+      <div class="card">
+        <h2>📱 Mobile</h2>
+        <p>Column layout, small text, hidden nav</p>
+      </div>
+      <div class="card">
+        <h2>💻 Tablet</h2>
+        <p>Row layout, nav appears, bigger text</p>
+      </div>
+      <div class="card">
+        <h2>🖥️ Desktop</h2>
+        <p>Full layout, large hero, wide padding</p>
+      </div>
+    </div>
+
+  </body>
+</html>
