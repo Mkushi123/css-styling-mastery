@@ -1,4 +1,89 @@
-h1 {
-  color: tomato;
-  font-size: 36px;
+/* 2. Reset and Box-sizing */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 3. Google Font application */
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* 4. Flexbox Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: #333;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* 5. Gradient Hero Section */
+.hero {
+    height: 60vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+/* 6. Content Section with Cards (Flexbox + Gap) */
+.container {
+    padding: 3rem 5%;
+}
+
+.card-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    flex: 1; /* Inafanya card zichukue nafasi sawa */
+}
+
+/* 7. Media Query for Mobile (Stacking Cards) */
+@media (max-width: 768px) {
+    .card-grid {
+        flex-direction: column;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* 8. Footer */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 20px;
 }
